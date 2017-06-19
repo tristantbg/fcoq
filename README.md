@@ -15,6 +15,10 @@ Jeet is an advanced and intuitive grid system for both Sass and Stylus. For docu
 ### Rupture
 Rupture is a utility for working with media queries in stylus.
 
+### Flickity
+
+### Smoothstate
+
 ### Server Requirements
 Kirby runs on PHP 5.3+, Apache, or Nginx
 

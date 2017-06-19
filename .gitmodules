@@ -10,3 +10,6 @@
 [submodule "site/fields/builder"]
 	path = site/fields/builder
 	url = https://github.com/TimOetting/kirby-builder.git
+[submodule "site/plugins/kirby-panel-prevnext"]
+	path = site/plugins/kirby-panel-prevnext
+	url = https://github.com/jenstornell/kirby-panel-prevnext
