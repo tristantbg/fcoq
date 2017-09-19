@@ -2,14 +2,17 @@
 
 title: About
 pages: false
-files: false
+files: true
 fields:
   title:
     label: Title
     type:  text
   text:
-    label: Text
-    type:  textarea
-  contact:
     label: Contact
-    type: textarea
+    type:  textarea
+  column1:
+    label: Content 1
+    type:  textarea
+  column2:
+    label: Content 2
+    type:  textarea

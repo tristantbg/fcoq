@@ -16,10 +16,14 @@
 		<meta name="description" content="<?= $site->description()->html() ?>">
 	<?php else: ?>
 		<meta name="DC.Title" content="<?= $page->title()->html() ?>" />
-		<?php if(!$page->text()->empty()): ?>
-			<meta name="description" content="<?= $page->text()->excerpt(250) ?>">
-			<meta name="DC.Description" content="<?= $page->text()->excerpt(250) ?>"/ >
-			<meta property="og:description" content="<?= $page->text()->excerpt(250) ?>" />
+		<?php if(isset($description)): ?>
+			<meta name="description" content="<?= $description ?>">
+			<meta name="DC.Description" content="<?= $description ?>"/ >
+			<meta property="og:description" content="<?= $description ?>" />
+		<?php elseif(!$page->text()->empty()): ?>
+			<meta name="description" content="">
+			<meta name="DC.Description" content=""/ >
+			<meta property="og:description" content="" />
 		<?php else: ?>
 			<meta name="description" content="">
 			<meta name="DC.Description" content=""/ >
@@ -39,7 +43,7 @@
 	<meta property="og:url" content="<?= html($page->url()) ?>" />
 	<?php if($page->content()->name() == "project"): ?>
 		<?php if (!$page->featured()->empty()): ?>
-			<meta property="og:image" content="<?= resizeOnDemand($page->image($page->featured()), 1200) ?>"/>
+			<meta property="og:image" content="<?= $page->featured()->toFile()->width(1200)->url() ?>"/>
 		<?php endif ?>
 	<?php else: ?>
 		<?php if(!$site->ogimage()->empty()): ?>
@@ -66,6 +70,7 @@
 	<?php endif ?>
 
 </head>
+
 <body>
 
 <div id="outdated">
@@ -76,11 +81,16 @@
 </div>
 
 <div class="loader">
-	<div class="spinner">
-		<svg class="circular" viewBox="25 25 50 50">
-		<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="1" stroke-miterlimit="10"></circle>
-		</svg>
-	</div>
 </div>
+
+<div id="main">
+
+<header>
+	<div id="site-title">
+		<a href="<?= $site->url() ?>" data-target="index">
+			François<br>&nbsp;&nbsp;&nbsp;Coquerel
+		</a>
+	</div>
+</header>
 
 <div id="container">

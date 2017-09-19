@@ -1,7 +1,18 @@
 <?php snippet('header') ?>
 
-<h1><?php echo $page->title()->html() ?></h1>
+<div id="page-content" class="default">
+	
+	<div id="title-bottom">
+		<?= $page->title()->html() ?>
+	</div>
 
-<p><?php echo $page->text()->kirbytext() ?></p>
+	<?= $page->text()->kt() ?>
+
+	<div id="bottom-link">
+		<a href="<?= $site->url() ?>" data-target="index">
+			Back
+		</a>
+	</div>
+</div>
 
 <?php snippet('footer') ?>

@@ -1,16 +1,13 @@
 <?php
 
 return function ($site, $pages, $page) {
-	$projects = $page->children()->visible();
-	if ($filter = param("filter")) {
-		$projects = $projects->filterBy('category', $filter);
-	}
+	$projects = $site->index()->visible()->filterBy('template', 'project');
 	$commissionedProjects = $site->index()->visible()->filterBy('category', 'commissioned');
 	$personalProjects = $site->index()->visible()->filterBy('category', 'personal');
 	$title = $page->title()->html();
 
 	return array(
-	'bodyClass' => 'projects',
+	'bodyClass' => 'index',
 	'projects' => $projects,
 	'commissionedProjects' => $commissionedProjects,
 	'personalProjects' => $personalProjects,

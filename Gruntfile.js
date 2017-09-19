@@ -4,13 +4,17 @@ module.exports = function(grunt) {
             plugins: {
                 src: [
                 'site/plugins/embed/assets/js/embed.js',
+                //'assets/js/vendor/jquery-ias.min.js', 
+                'node_modules/smooth-scroll/dist/js/smooth-scroll.js', 
                 'node_modules/flickity/dist/flickity.pkgd.min.js', 
+                'node_modules/plyr/dist/plyr.js', 
+                'lib/marquee3000/marquee3k-noUMD.min.js',
                 //'node_modules/lazysizes/plugins/object-fit/ls.object-fit.min.js', 
-                //'node_modules/lazysizes/lazysizes.min.js', 
-                //'node_modules/lazysizes/plugins/optimumx/ls.optimumx.min.js', 
+                'node_modules/lazysizes/lazysizes.min.js', 
+                'node_modules/lazysizes/plugins/optimumx/ls.optimumx.min.js', 
                 //'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js', 
                 //'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
-                //'node_modules/smoothstate/jquery.smoothState.min.js'
+                'node_modules/smoothstate/jquery.smoothState.min.js'
                 ],
                 dest: 'assets/js/plugins.concat.js'
             },
@@ -53,6 +57,7 @@ module.exports = function(grunt) {
             files: {
               'assets/css/build/build.min.css': 
               ['lib/normalize-css/normalize.css', 
+              'assets/css/plyr/scss/plyr.css', 
               'site/plugins/embed/assets/css/embed.css', 
               'node_modules/flickity/dist/flickity.min.css',
               'assets/css/app.min.css']

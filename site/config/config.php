@@ -29,7 +29,10 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
 
+c::set('site-categories', ['commissioned', 'personal']);
+
 c::set('debug', true);
+c::set('home', 'projects');
 c::set('plugin.embed.video.lazyload', true);
 c::set('plugin.embed.video.lazyload.btn', 'assets/images/play.png');
 c::set('kirbytext.image.figure', false);
@@ -68,4 +71,4 @@ c::set('routes', array(
 				Sitemap: ' . u('sitemap.xml'), 'txt');
 		}
 		)
-	));
+));

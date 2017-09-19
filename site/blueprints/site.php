@@ -14,6 +14,10 @@ fields:
   keywords:
     label: Keywords
     type:  tags
+  aboutpage:
+    label: About Page
+    type: select
+    options: pages
   customcss:
     label: Custom CSS
     type: textarea
