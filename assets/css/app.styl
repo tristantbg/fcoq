@@ -293,9 +293,10 @@ header
 		display none
 	.project-item
 		span(2/10)
-		margin-bottom $padding
+		margin-bottom ($padding*3)
 		+below($md)
 			stack()
+			margin-bottom $padding
 		a
 			display block
 		.project-title
@@ -311,6 +312,15 @@ header
 			// align-items center
 			img
 				display block
+		&.medium
+			span(3/10)
+		&.large
+			span(4/10)
+		for num in 1..10
+			&.ml-{num}
+				margin-left (num * 10%)
+			&.mr-{num}
+				margin-right (num * 10%)
 
 #page-content.projects
 	#sidebar

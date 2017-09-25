@@ -37,11 +37,11 @@ fields:
   title:
     label: Title
     type:  text
-    width: 1/2
+    width: 1/3
   subtitle:
     label: Subtitle
     type: text
-    width: 1/2
+    width: 1/3
   category:
     label: Category
     type: select
@@ -49,7 +49,7 @@ fields:
     options:
       commissioned: Commissioned
       personal: Personal
-    width: 1/4
+    width: 1/3
   featured:
     label: Featured image
     type: quickselect
@@ -59,14 +59,30 @@ fields:
   size:
     label: Size
     type: select
-    width: 1/2
+    width: 1/4
     columns: 1
-    default: medium
+    default: small
     required: true
     options:
       small: Small
       medium: Medium
       large: Large
+  marginLeft:
+    label: Offset Left
+    type: number
+    step: 1
+    min: 0
+    max: 8
+    default: 0
+    width: 1/4
+  marginRight:
+    label: Offset Right
+    type: number
+    step: 1
+    min: 0
+    max: 8
+    default: 2
+    width: 1/4
   medias: 
     label: Images
     type: images

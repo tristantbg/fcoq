@@ -18,7 +18,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 		
 			<?php $featured = $project->featured()->toFile() ?>
 		
-				<div class="project-item <?= $project->category() ?>">
+				<div class="project-item <?= $project->size() ?> <?= "ml-".$project->marginLeft() ?> <?= "mr-".$project->marginRight() ?> <?= $project->category() ?>">
 
 				<a 
 				class="project-thumb" 
