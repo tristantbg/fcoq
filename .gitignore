@@ -7,6 +7,7 @@ Thumbs.db
 /assets/js/app.concat.js
 /assets/js/plugins.concat.js
 /assets/js/build/*
+/assets/fonts/
 /node_modules
 /npm-debug.log
 /site/accounts
