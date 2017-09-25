@@ -35,6 +35,8 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 						alt="<?= $project->title()->html().' - © '.$site->title()->html() ?>" 
 						width="100%" height="auto" />
 					</div>
+
+					<div class="project-title"><?= $project->title()->html(); e($project->subtitle()->isNotEmpty(), ", ".$project->subtitle()->html()) ?></div>
 		
 				</a>
 					

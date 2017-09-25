@@ -60,6 +60,7 @@ $(function() {
         },
         interact: function(){
           app.loadSlider();
+          if (!isMobile) {
           // index
           var $menu = $(".category-title, .project");
           var $images = $("#index-hover img");
@@ -112,6 +113,7 @@ $(function() {
             $menu.attr('style', '');
             $(this).attr('style', '');
           });
+          }
         },
         plyr: function(loop) {
             players = plyr.setup('.js-player', {

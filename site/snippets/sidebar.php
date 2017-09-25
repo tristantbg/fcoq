@@ -1,5 +1,5 @@
 <div id="sidebar">
-	<?php foreach (["Commissioned" => $commissionedProjects, "Personal" => $personalProjects] as $c => $categoryProjects): ?>
+	<?php foreach (["Personal" => $personalProjects, "Commissioned" => $commissionedProjects] as $c => $categoryProjects): ?>
 		<div class="category">
 			<div class="category-title">
 				<a href="<?= $site->url()."/filter:".lcfirst($c) ?>">

@@ -32,6 +32,8 @@ body,html
 
 html
 	font-size 62.5%
+	+below($md)
+		font-size 50%
 
 body
 	font-family 'FC', Helvetica Neue, Arial, sans-serif
@@ -176,11 +178,19 @@ header
 	left $padding
 	white-space nowrap
 	z-index 500
+	+below($md)
+		background $primary
+		padding $padding 0 ($padding - 0.3) $padding
+		top 0
+		left 0
+		width 100%
 
 #page-content
 	span(1)
 	padding 0 $padding
 	margin-top $padding
+	+below($md)
+		margin-top ($padding*5)
 
 #sidebar, #sidebar-hover
 	position fixed
@@ -188,6 +198,10 @@ header
 	right $padding
 	z-index 300
 	span(3/12)
+	+below($md)
+		stack()
+		top ($padding*5)
+		width 'calc(100% - %s)' % ($padding*2)
 	.category
 		span(1)
 		padding-right 33%
@@ -202,6 +216,8 @@ header
 		transform-origin top right
 	.category-item
 		span(1)
+		+below($md)
+			padding-left 1.5rem
 		.index
 			float left
 			clear none
@@ -243,21 +259,25 @@ header
 
 #bottom-link
 	position fixed
+	text-transform uppercase
+	z-index 500
 	bottom $padding
 	right $padding
-	text-transform uppercase
 	transform rotate(90deg) translateY(100%)
 	transform-origin bottom right
-	z-index 500
 
 #title-bottom
 	position fixed
-	bottom $padding
-	left $padding
 	text-transform uppercase
-	transform rotate(-90deg) translateY(100%)
-	transform-origin bottom left
 	z-index 500
+	+above($md + 1)
+		bottom $padding
+		left $padding
+		transform rotate(-90deg) translateY(100%)
+		transform-origin bottom left
+	+below($md)
+		top $padding
+		right $padding
 
 #projects-grid
 	padding 0 (100%/12)
@@ -268,22 +288,21 @@ header
 	flex-wrap wrap
 	hideselect()
 	+below($md)
-		padding 0 $padding
+		padding 0 ($padding*2) 0 0
 	&::before, &::after
 		display none
 	.project-item
-		span(4/10)
-		margin-bottom ($frame*3)
+		span(2/10)
+		margin-bottom $padding
 		+below($md)
-			width 100%
-		&:nth-child(3n)
-			margin-left 20%
-			margin-right 40%
-		&:nth-child(6n)
-			margin-left 40%
-			margin-right 20%
+			stack()
 		a
 			display block
+		.project-title
+			margin $padding 0
+			display none
+			+below($md)
+				display block
 		.project-image
 			//cursor none
 			position relative
@@ -304,6 +323,24 @@ header
 #page-content.project
 	padding 0
 	margin-top 0
+	#sidebar
+		.category
+			+below($md)
+				padding-right 0
+		.title
+			+below($md)
+				padding-left 0
+				text-indent 0
+			div
+				+below($md)
+					float left
+			> div:nth-child(2)::before
+				+below($md)
+					content ', '
+					display inline
+		.category-title
+			+below($md)
+				display none
 	.slider
 		height 100vh
 		hideselect()
@@ -320,10 +357,20 @@ header
 			visibility hidden
 			.content
 				height 100%
-				padding 8% 0
+				padding 8% $padding
 				display inline-flex
 				background url('../../images/loader.gif') center no-repeat
 				background-size 15px
+				+below($md)
+					padding 7rem 1rem
+				img
+					+below($md)
+						width 100%
+						object-fit contain
+			.content.duo
+				img
+					+below($md)
+						width 50%
 			.content.video
 				display block
 				position relative
@@ -363,9 +410,21 @@ header
 			&[disabled]
 				display none
 
+#page-content.index
+	#sidebar
+		+below($md)
+			position absolute
+		.category-title
+			+below($md)
+				position initial
+				transform none
+				margin-bottom 1em
+
 #index-hover
 	column(4/12, $offset: 1/12)
 	position relative
+	+below($md)
+		display none
 	img
 		position absolute
 		top 0
@@ -374,6 +433,8 @@ header
 
 #page-content.default
 	column(2/12, $offset: 9/12)
+	+below($md)
+		stack()
 	h2
 		text-transform uppercase
 		margin-top 3em

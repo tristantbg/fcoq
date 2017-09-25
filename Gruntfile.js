@@ -4,8 +4,6 @@ module.exports = function(grunt) {
             plugins: {
                 src: [
                 'site/plugins/embed/assets/js/embed.js',
-                //'assets/js/vendor/jquery-ias.min.js', 
-                'node_modules/smooth-scroll/dist/js/smooth-scroll.js', 
                 'node_modules/flickity/dist/flickity.pkgd.min.js', 
                 'node_modules/plyr/dist/plyr.js', 
                 'lib/marquee3000/marquee3k-noUMD.min.js',
@@ -14,7 +12,7 @@ module.exports = function(grunt) {
                 'node_modules/lazysizes/plugins/optimumx/ls.optimumx.min.js', 
                 //'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js', 
                 //'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
-                'node_modules/smoothstate/jquery.smoothState.min.js'
+                'libraries/smoothstate-with-action/src/jquery.smoothState.js'
                 ],
                 dest: 'assets/js/plugins.concat.js'
             },

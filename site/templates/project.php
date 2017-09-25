@@ -79,7 +79,7 @@
 				?>
 			</div>
 		<?php else: ?>
-			<div class="content">
+			<div class="content<?php e($image->duo()->bool(), ' duo') ?>">
 				<img class="lazyimg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-flickity-lazyload="<?= $image->thumb(array('height' => 1500))->url() ?>" alt="<?= $title.' - © '.$site->title()->html() ?>" height="100%" width="auto" />
 				<noscript>
 					<img src="<?= $image->thumb(array('height' => 1500))->url() ?>" alt="<?= $title.' - © '.$site->title()->html() ?>" height="100%" width="auto" />
