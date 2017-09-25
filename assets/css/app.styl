@@ -23,7 +23,7 @@ $kinetic = cubic-bezier(0.77, 0, 0.175, 1)
 // CSS Reset
 global-reset()
 
-webfont('FC', 'FC', true, 'normal')
+webfont('FCZ', 'FCZ', true, 'normal')
 
 body,html
 	width 100%
@@ -33,10 +33,10 @@ body,html
 html
 	font-size 62.5%
 	+below($md)
-		font-size 50%
+		font-size 55%
 
 body
-	font-family 'FC', Helvetica Neue, Arial, sans-serif
+	font-family 'FCZ', Helvetica Neue, Arial, sans-serif
 	font-size 1.5rem
 	letter-spacing .015em
 	line-height 1.1
@@ -169,6 +169,7 @@ a, a:hover, a:visited, a:focus
 	span(1)
 	&.hide-images
 		.project-thumb
+			transition opacity 100ms ease
 			opacity 0
 
 header
@@ -217,7 +218,7 @@ header
 	.category-item
 		span(1)
 		+below($md)
-			padding-left 1.5rem
+			padding-left 1.2rem
 		.index
 			float left
 			clear none
@@ -283,7 +284,7 @@ header
 	padding 0 (100%/12)
 	margin-top 0
 	display inline-flex
-	justify-content space-between
+	justify-content flex-start
 	// align-items center
 	flex-wrap wrap
 	hideselect()
@@ -293,7 +294,7 @@ header
 		display none
 	.project-item
 		span(2/10)
-		margin-bottom ($padding*3)
+		margin-bottom ($padding*6)
 		+below($md)
 			stack()
 			margin-bottom $padding
@@ -313,14 +314,18 @@ header
 			img
 				display block
 		&.medium
-			span(3/10)
+			+above($md + 1)
+				span(3/10)
 		&.large
-			span(4/10)
+			+above($md + 1)
+				span(4/10)
 		for num in 1..10
 			&.ml-{num}
-				margin-left (num * 10%)
+				+above($md + 1)
+					margin-left (num * 10%)
 			&.mr-{num}
-				margin-right (num * 10%)
+				+above($md + 1)
+					margin-right (num * 10%)
 
 #page-content.projects
 	#sidebar
@@ -442,9 +447,13 @@ header
 		display none
 
 #page-content.default
-	column(2/12, $offset: 9/12)
+	span(2/12)
+	margin-left 73.5%
 	+below($md)
 		stack()
+	p
+		+below($md)
+			padding-left 1.2rem
 	h2
 		text-transform uppercase
 		margin-top 3em

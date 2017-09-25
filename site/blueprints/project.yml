@@ -81,7 +81,7 @@ fields:
     step: 1
     min: 0
     max: 8
-    default: 2
+    default: 0
     width: 1/4
   medias: 
     label: Images
