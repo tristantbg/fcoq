@@ -10,7 +10,7 @@ var width = $(window).width(),
     $projectsContent,
     projectsScroll,
     lastTarget = false,
-    $root = '/georgiapendlebury';
+    $root = '/';
 $(function() {
     var app = {
         init: function() {
@@ -19,6 +19,7 @@ $(function() {
             });
             $(document).ready(function($) {
                 app.sizeSet();
+                window.viewportUnitsBuggyfill.init();
                 $body = $('body');
                 $container = $('#container');
                 $header = $('header');

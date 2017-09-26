@@ -17,6 +17,7 @@
     "flickity": "^2.0.8",
     "lazysizes": "^4.0.0-rc3",
     "plyr": "^2.0.13",
-    "smoothstate": "^0.7.2"
+    "smoothstate": "^0.7.2",
+    "viewport-units-buggyfill": "^0.6.2"
   }
 }

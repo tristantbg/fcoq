@@ -108,6 +108,9 @@
 	<?php $idx++ ?>
 	<?php endforeach ?>
 
+
+	</div>
+
 	<div id="slide-number">
 		<?= "1 — ".$count ?>
 	</div>
@@ -117,9 +120,6 @@
 			Back
 		</a>
 	</div>
-
-	</div>
-
 
 </div>
 

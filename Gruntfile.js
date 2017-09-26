@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                 'node_modules/lazysizes/lazysizes.min.js', 
                 'node_modules/lazysizes/plugins/optimumx/ls.optimumx.min.js', 
                 //'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js', 
-                //'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
+                'node_modules/viewport-units-buggyfill/viewport-units-buggyfill.js',
                 'libraries/smoothstate-with-action/src/jquery.smoothState.js'
                 ],
                 dest: 'assets/js/plugins.concat.js'
