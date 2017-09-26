@@ -59,6 +59,13 @@ $(function() {
         },
         interact: function() {
             app.loadSlider();
+            showContent = function() {
+                $container.removeClass('hide-images');
+                $sidebarHover.empty();
+                $menu.attr('style', '');
+                $(this).attr('style', '');
+                contentHidden = false;
+            };
             if (!isMobile) {
                 // index
                 var $menu = $(".category-title, .project");
@@ -76,6 +83,7 @@ $(function() {
                     $images.hide();
                 });
                 // grid
+                var contentHidden = false;
                 $('.clone').remove();
                 $thumbs = $('.project-thumb');
                 $sidebarHover = $('#sidebar-hover');
@@ -103,16 +111,17 @@ $(function() {
                     });
                     $(".category-title").hide();
                     $categoryTitle.show().css('color', color);
-                }, function() {
-                    $container.removeClass('hide-images');
-                    $sidebarHover.empty();
-                    $menu.attr('style', '');
-                    $(this).attr('style', '');
+                    contentHidden = true;
+                }, showContent);
+                $(window).scroll(function(event) {
+                    if (contentHidden) {
+                        showContent();
+                    }
                 });
                 $container.removeClass('hide-images');
-                    $sidebarHover.empty();
-                    $menu.attr('style', '');
-                    $(this).attr('style', '');
+                $sidebarHover.empty();
+                $menu.attr('style', '');
+                $(this).attr('style', '');
             }
         },
         plyr: function(loop) {

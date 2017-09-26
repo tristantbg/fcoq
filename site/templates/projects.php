@@ -27,16 +27,18 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 				data-color="<?= $featured->color0() ?>" 
 				data-target="project">
 		
-					<div class="project-image">
+					<div class="project-image" style="background: <?= $featured->color0() ?>" >
 						<img 
-						class="lazyimg lazyload lazypreload" 
+						class="lazyimg lazyload" 
 						src="<?= $featured->thumb(array('width' => 200))->url() ?>" 
 						data-src="<?= $featured->thumb(array('width' => 1300))->url() ?>" 
 						alt="<?= $project->title()->html().' - © '.$site->title()->html() ?>" 
 						width="100%" height="auto" />
 					</div>
 
-					<div class="project-title"><?= $project->title()->html(); e($project->subtitle()->isNotEmpty(), ", ".$project->subtitle()->html()) ?></div>
+					<div class="project-title">
+						<?= $project->title()->html(); e($project->subtitle()->isNotEmpty(), ", ".$project->subtitle()->html()) ?>
+					</div>
 		
 				</a>
 					
