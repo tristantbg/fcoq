@@ -14,6 +14,7 @@ var width = $(window).width(),
 $(function() {
     var app = {
         init: function() {
+            console.log('Design & code by Tristan Bagot', 'www.tristanbagot.com');
             $(window).resize(function(event) {
                 app.sizeSet();
             });
