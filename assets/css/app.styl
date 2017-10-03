@@ -350,10 +350,13 @@ header
 			div
 				+below($md)
 					float left
-			> div:nth-child(2)::before
+			> div:nth-child(2)
 				+below($md)
-					content ', '
-					display inline
+					display none
+				&::before
+					+below($md)
+						content ', '
+						display inline
 		.category-title
 			+below($md)
 				display none
