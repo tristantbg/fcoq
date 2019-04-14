@@ -181,6 +181,7 @@ $(function() {
                 });
                 $slider.on('select.flickity', function(event, pointer, cellElement, cellIndex) {
                     $slideNumber.text(($slider.flkty.selectedIndex + 1) + ' — ' + $slider.count);
+                    if (cellElement.dataset.caption) $slideNumber[0].innerText += '<div class="caption">'+cellElement.dataset.caption+'</div>'
                 });
                 $('[event-target="overview"]').click(function(event) {
                     $(".overview-nav").toggleClass('visible');

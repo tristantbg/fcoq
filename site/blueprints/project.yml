@@ -9,6 +9,9 @@ files:
     color1:
       label: Dominant Color 2
       type: color
+    caption:
+      label: Caption
+      type: textarea
     duo:
       label: Merge with next image ?
       type: toggle
@@ -23,7 +26,7 @@ files:
       type: radio
       default: vimeo
       options:
-        vimeo: Vimeo 
+        vimeo: Vimeo
         youtube: Youtube
     videoexternal:
       label: Video external file link
@@ -83,7 +86,7 @@ fields:
     max: 8
     default: 0
     width: 1/4
-  medias: 
+  medias:
     label: Images
     type: images
   text:
