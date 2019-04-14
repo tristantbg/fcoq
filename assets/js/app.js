@@ -181,7 +181,7 @@ $(function() {
                 });
                 $slider.on('select.flickity', function(event, pointer, cellElement, cellIndex) {
                     $slideNumber.text(($slider.flkty.selectedIndex + 1) + ' — ' + $slider.count);
-                    if (cellElement.dataset.caption) $slideNumber[0].innerText += '<div class="caption">'+cellElement.dataset.caption+'</div>'
+                    if ($slider.flkty.selectedElement.dataset.caption) $slideNumber[0].innerHTML += '<span class="caption">&nbsp;&nbsp;&nbsp;'+$slider.flkty.selectedElement.dataset.caption.replace(/<p[^>]*>/g, "")+'</span>'
                 });
                 $('[event-target="overview"]').click(function(event) {
                     $(".overview-nav").toggleClass('visible');
