@@ -563,9 +563,9 @@ js-yaml@~3.5.2:
     argparse "^1.0.2"
     esprima "^2.6.0"
 
-lazysizes@^4.0.0-rc3:
-  version "4.0.0-rc3"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.0.0-rc3.tgz#f81a0794b920d8464d415445234cfe4abcd5dbd2"
+lazysizes@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.1.tgz#f450e36a995efb5817acb8c904f3d2f2efc29ffa"
 
 livereload-js@^2.2.0:
   version "2.2.2"
